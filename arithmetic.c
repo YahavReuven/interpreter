@@ -39,7 +39,6 @@ error_t handle_arithmetic_operation(char* instruction, value_t* result) {
 	}
 
 	for (int i = 0; i < sizeof(arithmetic_handlers) / sizeof(arithmetic_command_handler_table_t); i++) {
-		// TODO: change in the future for further conplication of operations
 		if (input_operator == arithmetic_handlers[i].symbol) {
 			err = arithmetic_handlers[i].handler(num1, num2, result);
 			return ERROR_SUCCESS;
